@@ -24,7 +24,7 @@ const BannerCursosRecientes: React.FC = () => {
           {cursosRecientes.map((curso) => (
             <Link
               key={`first-${curso.id}`}
-              href={`/curso/${curso.id}`}
+              href={`/cursos/${curso.id}`}
               className="flex-shrink-0 w-80 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-center space-x-4">

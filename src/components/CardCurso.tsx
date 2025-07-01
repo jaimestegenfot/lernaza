@@ -46,7 +46,7 @@ const CardCurso: React.FC<CardCursoProps> = ({ curso }) => (
         </span>
       </div>
       
-      <Link href={`/curso/${curso.id}`}>
+      <Link href={`/cursos/${curso.id}`}>
         <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-purple-600 hover:to-pink-600 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 text-sm shadow-lg hover:shadow-xl transform hover:scale-105">
           Ver más detalles
         </button>
