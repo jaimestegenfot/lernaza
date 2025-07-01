@@ -4,22 +4,11 @@ import { cursos } from '../../../data/mockData';
 import Link from 'next/link';
 
 // Generación estática de rutas
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return cursos.map((curso) => ({ id: String(curso.id) }));
 }
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-function getYouTubeEmbedUrl(url: string) {
-  const match = url.match(/(?:youtu.be\/|youtube.com\/(?:watch\?v=|embed\/|v\/))([\w-]{11})/);
-  return match ? `https://www.youtube.com/embed/${match[1]}` : null;
-}
-
-export default function CursoDetallePage({ params }: PageProps) {
+export default function CursoDetallePage({ params }: { params: { id: string } }) {
   const cursoId = parseInt(params.id);
   const curso = cursos.find(c => c.id === cursoId);
 
@@ -300,4 +289,9 @@ export default function CursoDetallePage({ params }: PageProps) {
       </div>
     </main>
   );
+}
+
+function getYouTubeEmbedUrl(url: string) {
+  const match = url.match(/(?:youtu.be\/|youtube.com\/(?:watch\?v=|embed\/|v\/))([\w-]{11})/);
+  return match ? `https://www.youtube.com/embed/${match[1]}` : null;
 } 
