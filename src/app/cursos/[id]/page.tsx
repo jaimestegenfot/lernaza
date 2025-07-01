@@ -12,9 +12,9 @@ function getYouTubeEmbedUrl(url: string) {
   return match ? `https://www.youtube.com/embed/${match[1]}` : null;
 }
 
-export default async function CursoDetallePage({ params }: { params: { id: string } }) {
-  const awaitedParams = await params;
-  const cursoId = parseInt(awaitedParams.id);
+export default async function CursoDetallePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const cursoId = parseInt(id);
   const curso = cursos.find(c => c.id === cursoId);
 
   if (!curso) {
