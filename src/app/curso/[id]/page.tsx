@@ -7,7 +7,8 @@ function getYouTubeEmbedUrl(url: string) {
   return match ? `https://www.youtube.com/embed/${match[1]}` : null;
 }
 
-export default function CursoDetallePage({ params }: { params: { id: string } }) {
+export default function CursoDetallePage(props) {
+  const { params } = props;
   const cursoId = parseInt(params.id);
   const curso = cursos.find(c => c.id === cursoId);
 
