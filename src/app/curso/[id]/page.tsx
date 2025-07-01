@@ -2,18 +2,12 @@ import { notFound } from 'next/navigation';
 import { cursos } from '../../../data/mockData';
 import Link from 'next/link';
 
-interface CursoDetallePageProps {
-  params: {
-    id: string;
-  };
-}
-
 function getYouTubeEmbedUrl(url: string) {
   const match = url.match(/(?:youtu.be\/|youtube.com\/(?:watch\?v=|embed\/|v\/))([\w-]{11})/);
   return match ? `https://www.youtube.com/embed/${match[1]}` : null;
 }
 
-export default function CursoDetallePage({ params }: CursoDetallePageProps) {
+export default function CursoDetallePage({ params }: { params: { id: string } }) {
   const cursoId = parseInt(params.id);
   const curso = cursos.find(c => c.id === cursoId);
 
