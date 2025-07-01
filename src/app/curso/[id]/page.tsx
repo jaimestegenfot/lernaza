@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { cursos } from '../../../data/mockData';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 function getYouTubeEmbedUrl(url: string) {
@@ -7,9 +8,10 @@ function getYouTubeEmbedUrl(url: string) {
   return match ? `https://www.youtube.com/embed/${match[1]}` : null;
 }
 
-export default function CursoDetallePage(props) {
-  const { params } = props;
-  const cursoId = parseInt(params.id);
+export default async function CursoDetallePage({ params }: { params: { id: string } }) {
+  // Si params es una promesa, espera su resolución
+  const resolvedParams = await params;
+  const cursoId = parseInt(resolvedParams.id);
   const curso = cursos.find(c => c.id === cursoId);
 
   if (!curso) {
