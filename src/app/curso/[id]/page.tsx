@@ -3,14 +3,24 @@ import { cursos } from '../../../data/mockData';
 // import { usePathname } from 'next/navigation'; // Eliminado porque no se usa
 import Link from 'next/link';
 
+// Generación estática de rutas
+export async function generateStaticParams() {
+  return cursos.map((curso) => ({ id: String(curso.id) }));
+}
+
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
 function getYouTubeEmbedUrl(url: string) {
   const match = url.match(/(?:youtu.be\/|youtube.com\/(?:watch\?v=|embed\/|v\/))([\w-]{11})/);
   return match ? `https://www.youtube.com/embed/${match[1]}` : null;
 }
 
-export default async function CursoDetallePage({ params }: { params: { id: string } }) {
-  const awaitedParams = await params;
-  const cursoId = parseInt(awaitedParams.id);
+export default function CursoDetallePage({ params }: PageProps) {
+  const cursoId = parseInt(params.id);
   const curso = cursos.find(c => c.id === cursoId);
 
   if (!curso) {
