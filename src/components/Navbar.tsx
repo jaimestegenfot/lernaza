@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
       <div className="flex justify-between items-center py-3 px-4 sm:px-6">
         {/* Logo */}
         <Link href="/" className="text-xl sm:text-2xl font-extrabold tracking-wide bg-gradient-to-r from-cyan-300 via-pink-300 to-yellow-200 bg-clip-text text-transparent drop-shadow-lg">
-          Lernaza
+          Aprendizaje Movil
         </Link>
 
         {/* Desktop Menu */}
@@ -92,7 +92,7 @@ const Navbar: React.FC = () => {
             {!isLoggedIn ? (
               <button
                 onClick={handleLogin}
-                className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600 hover:from-indigo-600 hover:to-pink-500 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border border-white/20"
+                className="bg-gradient-to-r from-cyan-600 via-cyan-600 to-cyan-600 hover:from-green-600 hover:to-green-600 text-white px-6 py-2 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border border-white/20"
               >
                 Iniciar sesión
               </button>

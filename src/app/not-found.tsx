@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <main className="min-h-[60vh] flex flex-col items-center justify-center px-4 py-20 bg-green-600">
+    <main className="min-h-[60vh] flex flex-col items-center justify-center px-4 py-20 bg-green-100">
       <div className="bg-white rounded-3xl shadow-2xl p-12 max-w-lg w-full text-center border-4 border-green-300 relative overflow-hidden">
         {/* Efecto decorativo suave */}
         <div className="absolute -top-10 -left-10 w-32 h-32 bg-green-200/40 rounded-full blur-2xl z-0" />

@@ -6,7 +6,7 @@ const Footer: React.FC = () => (
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-8">
       {/* Logo y slogan */}
       <div className="mb-8 md:mb-0 flex-1">
-        <Link href="/" className="text-2xl font-extrabold bg-gradient-to-r from-cyan-300 via-pink-300 to-yellow-200 bg-clip-text text-transparent drop-shadow-lg">Lernaza</Link>
+        <Link href="/" className="text-2xl font-extrabold bg-gradient-to-r from-cyan-300 via-pink-300 to-yellow-200 bg-clip-text text-transparent drop-shadow-lg">Aprendizaje Mobil</Link>
         <p className="mt-3 text-sm text-gray-300 max-w-xs">Aprende sin límites. Inspira tu futuro con la mejor experiencia educativa online.</p>
       </div>
       {/* Navegación */}
