@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <div className="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto">
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-300 via-pink-300 to-yellow-200 bg-clip-text text-transparent mb-6 drop-shadow-lg animate-fade-in">
-            Aprende sin límites en <span className="underline decoration-wavy decoration-pink-400">Lernaza</span>
+            Aprende con <span className="underline decoration-wavy decoration-pink-400">Aprendizaje Movil</span>
           </h1>
           <p className="text-lg sm:text-2xl text-blue-100 font-light mb-8 animate-fade-in delay-100">
             Descubre cursos de tecnología, matemáticas, idiomas, historia, negocios y mucho más. <br className="hidden sm:block" />
